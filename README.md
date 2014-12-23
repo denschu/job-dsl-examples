@@ -1,24 +1,21 @@
 
 
-# Voraussetzungen
-
 # Installation
 
-## Run Docker image
+## Build and run Docker image
 
 ```shell
 docker build -t denschu/jenkins .
-docker run -p 8080:8080 -u root -v /tmp/jenkins_home:/var/jenkins_home denschu/jenkins
-boot2docker ip
+docker run -p 8080:8080 denschu/jenkins
 ```
 
-## Open URL in browser
+## Open Jenkins UI in webbrowser
 
 ```shell
 http://192.168.59.103:8080/
 ```
 
-## Add Maven path in http://192.168.59.103:8080/configure
+## Add Maven path in Jenkins configuration
 
 ```shell
 /usr/share/maven/
@@ -36,7 +33,7 @@ http://192.168.59.103:8080/
 1. User triggers Release-Build aus (Release Button)
 2. Pre Release Step: Replace SNAPSHOT-Version in pom.xml ("mvn build-helper:parse-version versions:set -DnewVersion=${parsedVersion.majorVersion}.\${parsedVersion.minorVersion}.\${parsedVersion.incrementalVersion}-${BUILD_NUMBER}")
 2. Execute normal build process ("mvn clean package")
-3. Post Release Step: Deploy artifact to Maven repository (mvn deploy)
+3. Post Release Step: Deploy artifact to Maven repository ("mvn deploy")
 4. Tag version in SCM (mvn scm:tag)
 5. Groovy Postbuild: manager.addShortText(manager.build.getEnvironment(manager.listener)['POM_VERSION'])
 6. Trigger Deploy Job
