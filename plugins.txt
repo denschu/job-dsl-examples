@@ -1,0 +1,12 @@
+scm-api:0.2
+git-client:1.13.0
+git:2.3.2
+groovy-postbuild:2.2
+script-security:1.5
+promoted-builds:2.19
+maven-plugin:2.8
+mailer:1.12
+release::2.4.1
+dashboard-view::2.9.4
+javadoc:1.3
+parameterized-trigger:2.25
