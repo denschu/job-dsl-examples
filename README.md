@@ -200,6 +200,7 @@ job{
 https://wiki.jenkins-ci.org/display/JENKINS/Release+Plugin
 https://wiki.jenkins-ci.org/display/JENKINS/Groovy+Postbuild+Plugin
 https://wiki.jenkins-ci.org/display/JENKINS/Promoted+Builds+Plugin
+https://wiki.jenkins-ci.org/display/JENKINS/Job+DSL+Plugin
 
 ## Maven Plugins
 
@@ -207,8 +208,6 @@ http://mojo.codehaus.org/build-helper-maven-plugin/parse-version-mojo.html
 http://mojo.codehaus.org/versions-maven-plugin/set-mojo.html
 http://maven.apache.org/scm-archives/scm-LATEST/maven-scm-plugin/tag-mojo.html
 
-# Release-Job DSL für Jenkins
-https://github.com/jenkinsci/job-dsl-plugin/wiki/Tutorial---Using-the-Jenkins-Job-DSL
 
 
 
