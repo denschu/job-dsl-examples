@@ -22,6 +22,7 @@ projects.each {
 				preBuildSteps {
 					maven {
 						mavenInstallation("Maven 3.0.4")
+						rootPOM("${projectName}/pom.xml")
 						goals("build-helper:parse-version")
 						goals("versions:set")
 						property("newVersion", "\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion}.\${parsedVersion.incrementalVersion}-\${BUILD_NUMBER}")
@@ -29,6 +30,7 @@ projects.each {
 				}
 				postSuccessfulBuildSteps {
 					maven {
+						rootPOM("${projectName}/pom.xml")
 						goals("deploy")
 					}
 					maven {
